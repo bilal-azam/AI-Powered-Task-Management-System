@@ -1,0 +1,12 @@
+{
+  "name": "ai-task-manager",
+  "version": "1.0.0",
+  "description": "AI-powered task management system",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
