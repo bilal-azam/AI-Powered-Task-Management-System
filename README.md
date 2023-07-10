@@ -1,27 +1,37 @@
-# AI Task Manager
+# Project Name
 
-## Overview
-AI Task Manager is a Node.js application with Express and MongoDB that helps in managing tasks with AI integration for task prioritization.
+## Description
+This is a Node.js application with Express.js, MongoDB, and AI features.
 
-## Installation
-1. Clone the repository
-2. Run npm install to install dependencies
-3. Create a .env file with your environment variables
-4. Start the server with npm start
+## Features
+- User management
+- Task management
+- Chat feature
+- Notifications
+- User roles
+
+## Setup
+1. Clone the repository.
+2. Run `npm install` to install dependencies.
+3. Configure environment variables.
+4. Run `npm start` to start the server.
 
 ## API Endpoints
-- **Users**
-  - POST /api/users/register - Register a new user
-  - POST /api/users/login - Login a user
-
-- **Tasks**
-  - POST /api/tasks - Create a new task
-  - GET /api/tasks - Get all tasks
-  - GET /api/tasks/user - Get tasks by user
-  - GET /api/tasks/:id - Get a task by ID
-  - PUT /api/tasks/:id - Update a task
-  - DELETE /api/tasks/:id - Delete a task
-  - POST /api/tasks/assign - Assign a task to a user
-
-- **AI**
-  - POST /api/ai/prioritize - Prioritize tasks
+- **User**
+  - `POST /api/users/register` - Register a new user
+  - `POST /api/users/login` - Login a user
+  - `PUT /api/users/role` - Assign a role to a user
+- **Task**
+  - `POST /api/tasks` - Create a new task
+  - `GET /api/tasks` - Get all tasks
+  - `GET /api/tasks/:id` - Get a task by ID
+  - `PUT /api/tasks/:id` - Update a task
+  - `DELETE /api/tasks/:id` - Delete a task
+  - `POST /api/tasks/assign` - Assign a task to a user
+  - `PUT /api/tasks/status` - Update the status of a task
+  - `GET /api/tasks/search` - Search tasks
+- **Chat**
+  - `POST /api/chat/send` - Send a message
+  - `GET /api/chat/messages/:userId` - Get messages for a user
+- **Notifications**
+  - `POST /api/notifications` - Send notifications
