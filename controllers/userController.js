@@ -1,15 +1,13 @@
-const assignRole = async (req, res) => {
-    const { userId, role } = req.body;
-    try {
-        const user = await User.findById(userId);
-        if (!user) return res.status(404).json({ message: 'User not found' });
+const { sendNotification } = require('../services/notificationService');
 
-        user.role = role;
-        await user.save();
-        res.json(user);
+const notifyUser = async (req, res) => {
+    const { userId, subject, message } = req.body;
+    try {
+        await sendNotification(userId, subject, message);
+        res.json({ message: 'Notification sent' });
     } catch (error) {
         res.status(400).json({ error: error.message });
     }
 };
 
-module.exports = { registerUser, loginUser, assignRole };
+module.exports = { registerUser, loginUser, assignRole, notifyUser };

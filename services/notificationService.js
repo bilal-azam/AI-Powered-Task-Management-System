@@ -1,24 +1,28 @@
+const User = require('../models/User');
 const nodemailer = require('nodemailer');
-const Task = require('../models/Task');
 
-const sendDueDateNotifications = async () => {
-    const tasks = await Task.find({ dueDate: { $lt: new Date() } });
-    const transporter = nodemailer.createTransport({
-        service: 'Gmail',
-        auth: {
-            user: process.env.EMAIL_USER,
-            pass: process.env.EMAIL_PASS
-        }
-    });
+const sendNotification = async (userId, subject, message) => {
+    try {
+        const user = await User.findById(userId);
+        if (!user) throw new Error('User not found');
 
-    tasks.forEach(task => {
-        transporter.sendMail({
-            from: process.env.EMAIL_USER,
-            to: task.assignedToEmail,
-            subject: 'Task Due Date Notification',
-            text: `Your task "${task.title}" is overdue!`
+        const transporter = nodemailer.createTransport({
+            service: 'Gmail',
+            auth: {
+                user: process.env.EMAIL_USER,
+                pass: process.env.EMAIL_PASS
+            }
         });
-    });
+
+        await transporter.sendMail({
+            from: process.env.EMAIL_USER,
+            to: user.email,
+            subject: subject,
+            text: message
+        });
+    } catch (error) {
+        console.error('Error sending notification:', error.message);
+    }
 };
 
-module.exports = { sendDueDateNotifications };
+module.exports = { sendNotification };
