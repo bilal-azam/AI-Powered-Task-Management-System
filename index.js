@@ -8,6 +8,7 @@ const aiRoutes = require('./routes/aiRoutes');
 const profileRoutes = require('./routes/profileRoutes');
 const chatRoutes = require('./routes/chatRoutes');
 const fileRoutes = require('./routes/fileRoutes');
+const analyticsRoutes = require('./routes/analyticsRoutes');
 const { sendDueDateNotifications } = require('./services/notificationService');
 
 connectDB();
@@ -19,6 +20,7 @@ app.use('/api/ai', aiRoutes);
 app.use('/api/profiles', profileRoutes);
 app.use('/api/chat', chatRoutes);
 app.use('/api/files', fileRoutes);
+app.use('/api/analytics', analyticsRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
