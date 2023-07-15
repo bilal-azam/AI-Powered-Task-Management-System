@@ -9,6 +9,7 @@ const profileRoutes = require('./routes/profileRoutes');
 const chatRoutes = require('./routes/chatRoutes');
 const fileRoutes = require('./routes/fileRoutes');
 const analyticsRoutes = require('./routes/analyticsRoutes');
+const activityLogRoutes = require('./routes/activityLogRoutes');
 const { sendDueDateNotifications } = require('./services/notificationService');
 
 connectDB();
@@ -21,6 +22,7 @@ app.use('/api/profiles', profileRoutes);
 app.use('/api/chat', chatRoutes);
 app.use('/api/files', fileRoutes);
 app.use('/api/analytics', analyticsRoutes);
+app.use('/api/activity', activityLogRoutes);
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
