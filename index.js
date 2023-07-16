@@ -10,10 +10,12 @@ const chatRoutes = require('./routes/chatRoutes');
 const fileRoutes = require('./routes/fileRoutes');
 const analyticsRoutes = require('./routes/analyticsRoutes');
 const activityLogRoutes = require('./routes/activityLogRoutes');
+const i18nMiddleware = require('./middleware/i18nMiddleware');
 const { sendDueDateNotifications } = require('./services/notificationService');
 
 connectDB();
 
+app.use(i18nMiddleware);
 app.use(express.json());
 app.use('/api/users', userRoutes);
 app.use('/api/tasks', taskRoutes);
