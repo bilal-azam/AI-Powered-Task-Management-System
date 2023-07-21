@@ -1,11 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const { prioritizeTasks } = require('../controllers/aiController');
+const { getExternalData } = require('../controllers/aiController');
 
-router.post('/prioritize', (req, res) => {
-    const { tasks } = req.body;
-    const prioritizedTasks = prioritizeTasks(tasks);
-    res.json(prioritizedTasks);
-});
+router.get('/external-data', getExternalData);
 
 module.exports = router;

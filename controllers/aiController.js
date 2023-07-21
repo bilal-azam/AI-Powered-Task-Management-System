@@ -1,5 +1,12 @@
-const prioritizeTasks = (tasks) => {
-    return tasks.sort((a, b) => new Date(a.dueDate) - new Date(b.dueDate));
+const { fetchExternalData } = require('../services/externalAPIService');
+
+const getExternalData = async (req, res) => {
+    try {
+        const data = await fetchExternalData();
+        res.json(data);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
 };
 
-module.exports = { prioritizeTasks };
+module.exports = { getExternalData };
