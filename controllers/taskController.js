@@ -1,20 +1,15 @@
-const Task = require('../models/Task');
-const { getCachedData, setCacheData } = require('../services/cacheService');
+const { logAction } = require('../services/loggerService');
 
-const getTasks = async (req, res) => {
-    const cacheKey = 'tasks';
-    const cachedData = getCachedData(cacheKey);
-    if (cachedData) {
-        return res.json(cachedData);
-    }
-
+// Example of logging an action
+const createTask = async (req, res) => {
     try {
-        const tasks = await Task.find();
-        setCacheData(cacheKey, tasks, 600); // Cache for 10 minutes
-        res.json(tasks);
+        const task = new Task(req.body);
+        await task.save();
+        logAction('CREATE_TASK', { taskId: task._id });
+        res.status(201).json(task);
     } catch (error) {
         res.status(400).json({ error: error.message });
     }
 };
 
-module.exports = { getTasks };
+module.exports = { createTask };
