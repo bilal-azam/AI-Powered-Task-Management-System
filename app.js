@@ -1,4 +1,4 @@
-const rateLimiter = require('./middleware/rateLimiter');
+const i18n = require('./services/i18nService');
 
-// Apply rate limiter to all requests
-app.use(rateLimiter);
+// Initialize i18n
+app.use(i18n.init);
