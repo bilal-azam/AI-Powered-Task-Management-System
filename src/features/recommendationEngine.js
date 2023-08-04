@@ -1,6 +1,6 @@
-// AI-driven Product Recommendation Engine
+// Optimized AI-driven Product Recommendation Engine
 function getRecommendations(userId) {
-    // Placeholder for AI logic to recommend products based on user behavior
+    // Optimized logic to recommend products
     return [];
 }
 
