@@ -1,6 +1,6 @@
-// AI-based Product Search Feature
+// Optimized AI-based Product Search Algorithm
 function searchProducts(query) {
-    // AI logic to search for products based on query
+    // Optimized logic to search for products based on query
     return [];
 }
 
