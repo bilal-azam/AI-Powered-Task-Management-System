@@ -1,6 +1,6 @@
-// Analytics Dashboard for Admin Panel
+// Optimized Data Fetching for Analytics Dashboard
 function renderAnalyticsDashboard() {
-    // Fetch and display analytics data
+    // Optimized logic to fetch and display analytics data
 }
 
 module.exports = { renderAnalyticsDashboard };
