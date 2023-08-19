@@ -1,4 +1,4 @@
-// UI Component for Analytics Dashboard
+// Refactor Analytics Dashboard UI for Better Performance
 function AnalyticsDashboardUI({ data }) {
     return (
         <div className="analytics-dashboard-ui">
