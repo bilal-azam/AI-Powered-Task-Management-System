@@ -1,4 +1,4 @@
-// UI Component for Viewing Notifications
+// Refactor Notifications UI for Better User Experience
 function NotificationsUI({ notifications }) {
     return (
         <div className="notifications-ui">
