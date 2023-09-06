@@ -1,7 +1,10 @@
-// Optimized Feedback Storage Mechanism
+// Integrate Sentiment Analysis with Feedback System
+const { analyzeSentiment } = require('./sentimentAnalysis');
+
 function collectFeedback(userId, feedback) {
-    // Optimized logic to store user feedback
-    return true;
+    const sentiment = analyzeSentiment(feedback);
+    // Save feedback and sentiment
+    return { feedback, sentiment };
 }
 
 module.exports = { collectFeedback };
