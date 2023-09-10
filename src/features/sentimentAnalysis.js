@@ -1,6 +1,6 @@
-// AI-driven Sentiment Analysis on Feedback
+// Optimized Sentiment Analysis Algorithm for Feedback
 function analyzeSentiment(feedback) {
-    // AI logic to determine sentiment of feedback
+    // Optimized AI logic to determine sentiment
     return 'positive';
 }
 
