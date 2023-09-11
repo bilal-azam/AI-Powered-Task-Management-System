@@ -1,8 +1,8 @@
-// UI Component for Feedback Sentiment Analytics
+// Refactor Feedback Sentiment Analytics UI for Clarity
 function FeedbackAnalyticsUI({ analytics }) {
     return (
         <div className="feedback-analytics-ui">
-            <h2>Feedback Sentiment Analytics</h2>
+            <h2>Feedback Sentiment Analysis</h2>
             <div>
                 <p>Positive: {analytics.positive}%</p>
                 <p>Neutral: {analytics.neutral}%</p>
