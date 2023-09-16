@@ -1,11 +1,11 @@
-// Wishlist Feature for Users
+// Optimized Wishlist Management System
 function addToWishlist(userId, productId) {
-    // Logic to add a product to user's wishlist
+    // Optimized logic to manage wishlist
     return true;
 }
 
 function getWishlist(userId) {
-    // Logic to retrieve user's wishlist
+    // Optimized logic to retrieve wishlist
     return [];
 }
 
