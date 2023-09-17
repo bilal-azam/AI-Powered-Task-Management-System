@@ -1,4 +1,4 @@
-// UI Component for Wishlist Management
+// Refactor Wishlist UI for Better User Experience
 function WishlistUI({ wishlist }) {
     return (
         <div className="wishlist-ui">
