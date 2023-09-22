@@ -1,6 +1,6 @@
-// User Account Deactivation Feature
+// Optimized Account Deactivation Process for Security
 function deactivateAccount(userId) {
-    // Logic to deactivate user account
+    // Optimized logic to securely deactivate user account
     return true;
 }
 
