@@ -1,9 +1,9 @@
-// UI Component for Account Deactivation Process
+// Refactor Account Deactivation UI for Better Usability
 function AccountDeactivationUI() {
     return (
         <div className="account-deactivation-ui">
-            <h2>Deactivate Your Account</h2>
-            <button>Deactivate Account</button>
+            <h2>Deactivate Account</h2>
+            <button>Deactivate</button>
         </div>
     );
 }
