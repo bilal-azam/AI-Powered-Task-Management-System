@@ -1,12 +1,12 @@
-// Integrate Account Deactivation with User Settings
-const { deactivateAccount } = require('../features/accountDeactivation');
+// Integrate Account Reactivation with User Settings
+const { reactivateAccount } = require('../features/accountReactivation');
 
 function renderUserSettings(userId) {
-    const handleDeactivateAccount = () => deactivateAccount(userId);
+    const handleReactivateAccount = () => reactivateAccount(userId);
     return (
         <div>
             <h1>User Settings</h1>
-            <button onClick={handleDeactivateAccount}>Deactivate Account</button>
+            <button onClick={handleReactivateAccount}>Reactivate Account</button>
         </div>
     );
 }
