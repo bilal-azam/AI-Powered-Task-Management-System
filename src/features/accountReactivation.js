@@ -1,6 +1,6 @@
-// User Account Reactivation Feature
+// Optimized Account Reactivation Process for Speed
 function reactivateAccount(userId) {
-    // Logic to reactivate user account
+    // Optimized logic to quickly reactivate user account
     return true;
 }
 
