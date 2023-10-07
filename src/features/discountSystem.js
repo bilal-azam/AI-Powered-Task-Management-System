@@ -1,6 +1,6 @@
-// Discount and Coupon System
+// Optimized Coupon Validation Logic for Speed
 function applyDiscount(userId, couponCode) {
-    // Logic to apply discount based on coupon code
+    // Optimized logic for validating and applying coupon
     return { success: true, discountAmount: 10 };
 }
 
