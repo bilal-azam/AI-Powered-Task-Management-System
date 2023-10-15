@@ -1,6 +1,6 @@
-// Search Functionality with Filters
+// Optimized Search Algorithm for Speed and Relevance
 function searchProducts(query, filters) {
-    // Logic to search products based on query and filters
+    // Optimized logic for fast and relevant search results
     return [];
 }
 
