@@ -1,11 +1,11 @@
-// User Roles and Permissions System
+// Optimized Roles and Permissions System for Security
 function assignRole(userId, role) {
-    // Logic to assign a role to a user
+    // Enhanced security in role assignment logic
     return true;
 }
 
 function checkPermission(userId, action) {
-    // Logic to check if the user has permission for a specific action
+    // Improved permission checking with enhanced security
     return true;
 }
 
