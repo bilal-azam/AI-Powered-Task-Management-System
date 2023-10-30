@@ -1,13 +1,10 @@
-// Refactor Analytics Dashboard UI for Better Performance
-function AnalyticsDashboardUI({ data }) {
+// UI Component for Displaying Analytics Dashboard
+function AnalyticsDashboardUI({ report }) {
     return (
         <div className="analytics-dashboard-ui">
             <h2>Analytics Dashboard</h2>
-            <div>
-                <p>Total Sales: {data.totalSales}</p>
-                <p>Total Users: {data.totalUsers}</p>
-                <p>Total Orders: {data.totalOrders}</p>
-            </div>
+            <p>Total Users: {report.totalUsers}</p>
+            <p>Total Sales: {report.totalSales}</p>
         </div>
     );
 }
