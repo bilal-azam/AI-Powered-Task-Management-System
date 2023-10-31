@@ -1,7 +1,8 @@
-// Test cases for Analytics Dashboard
-const { renderAnalyticsDashboard } = require('../src/pages/admin/analyticsDashboard');
+// Test cases for Advanced Analytics Dashboard
+const { generateAnalyticsReport } = require('../src/features/analyticsDashboard');
 
-test('should display analytics data', () => {
-    const data = renderAnalyticsDashboard();
-    expect(data).toHaveProperty('totalSales');
+test('should generate a detailed analytics report', () => {
+    const report = generateAnalyticsReport();
+    expect(report).toHaveProperty('totalUsers');
+    expect(report).toHaveProperty('totalSales');
 });
