@@ -1,12 +1,12 @@
 // Test cases for Wishlist Feature
-const { addToWishlist, getWishlist } = require('../src/features/wishlist');
+const { addToWishlist, getUserWishlist } = require('../src/features/wishlist');
 
-test('should add product to wishlist', () => {
-    const result = addToWishlist('user123', 'product123');
+test('should add a product to the wishlist', () => {
+    const result = addToWishlist('user123', 'product456');
     expect(result).toBe(true);
 });
 
-test('should retrieve user wishlist', () => {
-    const wishlist = getWishlist('user123');
-    expect(wishlist).toBeInstanceOf(Array);
+test('should retrieve the wishlist of a user', () => {
+    const wishlist = getUserWishlist('user123');
+    expect(Array.isArray(wishlist)).toBe(true);
 });
