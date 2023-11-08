@@ -1,6 +1,6 @@
-// Optimized Order History Retrieval
+// Order History Feature
 function getOrderHistory(userId) {
-    // Optimized logic to retrieve order history quickly
+    // Logic to retrieve the order history of a user
     return [];
 }
 
