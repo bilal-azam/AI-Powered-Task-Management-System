@@ -1,6 +1,6 @@
-// Optimized Product Recommendation Algorithm for Accuracy
+// Product Recommendation System using AI
 function recommendProducts(userId) {
-    // Improved logic to recommend products
+    // Logic to recommend products based on user behavior and preferences
     return [];
 }
 
