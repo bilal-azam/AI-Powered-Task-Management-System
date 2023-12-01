@@ -1,5 +1,8 @@
 # Project Name
 
+## Overview
+This project is a comprehensive eCommerce application built with Node.js, Express.js, MongoDB, and AI features. It includes various functionalities such as product reviews, wishlists, order history, product comparison, and more.
+
 ## Features
 - Product Review and Rating System
 - Wishlist Feature
@@ -18,8 +21,11 @@
 3. Configure environment variables.
 4. Run `npm start` to start the server.
 
-## Tests
-Run `npm test` to execute all test cases.
+## Usage
+Provide instructions on how to use the application here.
 
 ## Contributing
 Please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+## License
+Specify the license information here.
