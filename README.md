@@ -1,30 +1,19 @@
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-repo/your-project.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd your-project
-   ```
-3. Install the necessary dependencies:
-   ```bash
-   npm install
-   ```
-4. Set up environment variables. Create a `.env` file based on the `.env.example` template.
-5. Start the application:
-   ```bash
-   npm start
-   ```
+## Project Structure
+The project is organized as follows:
 
-## Usage
-1. Access the application in your browser at `http://localhost:3000`.
-2. Explore the features:
-   - Browse products
-   - Add reviews and ratings
-   - Manage wishlist
-   - View order history
-   - Use advanced filters for product search
-   - Receive AI-based recommendations
-   - Earn and redeem loyalty points
-   - Provide feedback
+- `src/` - Contains the main source code
+  - `components/` - React components
+  - `features/` - Application features and logic
+  - `middleware/` - Express middleware
+  - `utils/` - Utility functions
+- `tests/` - Contains test cases
+- `config/` - Configuration files
+- `public/` - Publicly accessible files
+- `views/` - Server-side views
+- `scripts/` - Automation scripts and tools
+
+## Architecture
+- **Backend:** Node.js with Express.js
+- **Database:** MongoDB
+- **AI Integration:** Various AI models for recommendations and analysis
+- **Frontend:** React.js with Redux for state management
