@@ -1,19 +1,33 @@
-## Project Structure
-The project is organized as follows:
+## API Endpoints
+- **GET /api/products** - Retrieve a list of products
+- **POST /api/products** - Create a new product
+- **GET /api/products/:id** - Retrieve a product by ID
+- **PUT /api/products/:id** - Update a product
+- **DELETE /api/products/:id** - Delete a product
+- **POST /api/reviews** - Add a review to a product
+- **GET /api/reviews/:productId** - Retrieve reviews for a product
+- **POST /api/orders** - Place a new order
+- **GET /api/orders/:userId** - Retrieve orders for a user
 
-- `src/` - Contains the main source code
-  - `components/` - React components
-  - `features/` - Application features and logic
-  - `middleware/` - Express middleware
-  - `utils/` - Utility functions
-- `tests/` - Contains test cases
-- `config/` - Configuration files
-- `public/` - Publicly accessible files
-- `views/` - Server-side views
-- `scripts/` - Automation scripts and tools
+## Data Models
+- **Product**
+  - `id`: string
+  - `name`: string
+  - `price`: number
+  - `description`: string
+  - `category`: string
+  - `rating`: number
 
-## Architecture
-- **Backend:** Node.js with Express.js
-- **Database:** MongoDB
-- **AI Integration:** Various AI models for recommendations and analysis
-- **Frontend:** React.js with Redux for state management
+- **Review**
+  - `id`: string
+  - `productId`: string
+  - `userId`: string
+  - `rating`: number
+  - `comment`: string
+
+- **Order**
+  - `id`: string
+  - `userId`: string
+  - `products`: array of product IDs
+  - `totalAmount`: number
+  - `status`: string
