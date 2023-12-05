@@ -1,33 +1,17 @@
-## API Endpoints
-- **GET /api/products** - Retrieve a list of products
-- **POST /api/products** - Create a new product
-- **GET /api/products/:id** - Retrieve a product by ID
-- **PUT /api/products/:id** - Update a product
-- **DELETE /api/products/:id** - Delete a product
-- **POST /api/reviews** - Add a review to a product
-- **GET /api/reviews/:productId** - Retrieve reviews for a product
-- **POST /api/orders** - Place a new order
-- **GET /api/orders/:userId** - Retrieve orders for a user
+## Troubleshooting
+### Common Issues
+- **Issue: Application fails to start**
+  - **Solution:** Ensure that all environment variables are properly configured and dependencies are installed. Check the logs for specific errors.
 
-## Data Models
-- **Product**
-  - `id`: string
-  - `name`: string
-  - `price`: number
-  - `description`: string
-  - `category`: string
-  - `rating`: number
+- **Issue: Database connection errors**
+  - **Solution:** Verify the database connection settings in your `.env` file. Ensure that MongoDB is running and accessible.
 
-- **Review**
-  - `id`: string
-  - `productId`: string
-  - `userId`: string
-  - `rating`: number
-  - `comment`: string
+- **Issue: API endpoints not responding**
+  - **Solution:** Check the server logs for errors. Ensure that the API routes are correctly defined and the server is running.
 
-- **Order**
-  - `id`: string
-  - `userId`: string
-  - `products`: array of product IDs
-  - `totalAmount`: number
-  - `status`: string
+### FAQ
+- **How do I contribute to the project?**
+  - Please refer to the [CONTRIBUTING.md](CONTRIBUTING.md) for contribution guidelines.
+
+- **How can I report a bug or request a feature?**
+  - Open an issue on the GitHub repository with detailed information about the bug or feature request.
