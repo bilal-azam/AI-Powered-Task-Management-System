@@ -26,3 +26,9 @@ MIT
 
 - **Order Tracking**: Added functionality to track orders in real-time. Users can now see the status and estimated delivery of their orders.
                 
+## New Features
+
+### User Profile UI
+
+- **User Profile**: Improved the user profile page UI to display user details more clearly and provide a better user experience.
+                
