@@ -32,3 +32,9 @@ MIT
 
 - **User Profile**: Improved the user profile page UI to display user details more clearly and provide a better user experience.
                 
+## New Features
+
+### Enhanced Notifications
+
+- **Notifications**: Added filters to the notifications feature, allowing users to view different types of notifications based on their preferences.
+                
