@@ -38,3 +38,9 @@ MIT
 
 - **Notifications**: Added filters to the notifications feature, allowing users to view different types of notifications based on their preferences.
                 
+## Bug Fixes
+
+### Order Tracking Integration
+
+- Fixed issues with the order tracking integration to ensure accurate status updates and improved user experience.
+                
