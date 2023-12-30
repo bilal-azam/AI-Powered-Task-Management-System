@@ -44,3 +44,9 @@ MIT
 
 - Fixed issues with the order tracking integration to ensure accurate status updates and improved user experience.
                 
+## Backend Improvements
+
+### Notifications Backend
+
+- Refactored the notifications backend endpoint to support filtering and improved data handling.
+                
