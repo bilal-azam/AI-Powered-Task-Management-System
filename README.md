@@ -50,3 +50,7 @@ MIT
 
 - Refactored the notifications backend endpoint to support filtering and improved data handling.
                 
+## General Updates
+
+- **Project Updates**: Updated the README to reflect recent changes and improvements in the project.
+                
