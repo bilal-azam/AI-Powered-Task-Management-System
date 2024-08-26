@@ -1,11 +1,12 @@
 const express = require('express');
-const http = require('http');
-const { initSocket } = require('./services/chatService');
+const i18n = require('./services/i18nService');
 
 const app = express();
-const server = http.createServer(app);
-initSocket(server);
+app.use(i18n.init);
+app.get('/', (req, res) => {
+    res.send(res.__('welcome'));
+});
 
-server.listen(3000, () => {
-    console.log('Server is running on port 3000');
+app.listen(3000, () => {
+    console.log('Server running on port 3000');
 });
