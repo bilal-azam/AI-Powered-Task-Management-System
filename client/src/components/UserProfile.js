@@ -2,20 +2,19 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const UserProfile = () => {
-    const [user, setUser] = useState(null);
+    const [profile, setProfile] = useState({});
 
     useEffect(() => {
-        axios.get('/profile')
-            .then(response => setUser(response.data))
-            .catch(error => console.error(error));
+        axios.get('/api/user/profile')
+            .then(response => setProfile(response.data))
+            .catch(error => console.error('Error fetching user profile:', error));
     }, []);
-
-    if (!user) return <div>Loading...</div>;
 
     return (
         <div>
-            <h1>{user.username}</h1>
-            <p>{user.email}</p>
+            <h2>User Profile</h2>
+            <p>Username: {profile.username}</p>
+            <p>Email: {profile.email}</p>
         </div>
     );
 };
