@@ -5,7 +5,7 @@ const fetchExternalData = async () => {
         const response = await axios.get('https://api.example.com/data');
         return response.data;
     } catch (error) {
-        console.error('Error fetching external data:', error.message);
+        console.error('Error fetching external data:', error);
         throw error;
     }
 };
