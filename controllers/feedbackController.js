@@ -1,7 +1,7 @@
-const submitFeedback = async (req, res) => {
-    // Save feedback to the database
-    console.log('Feedback received:', req.body.feedback);
+const saveFeedback = async (req, res) => {
+    const { feedback } = req.body;
+    // Save feedback to database logic here
     res.status(200).send('Feedback received');
 };
 
-module.exports = { submitFeedback };
+module.exports = { saveFeedback };
