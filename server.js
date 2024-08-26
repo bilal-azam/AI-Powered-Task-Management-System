@@ -1,3 +1,3 @@
-const authenticateToken = require('./middleware/authMiddleware');
+const protectedRoutes = require('./routes/protectedRoutes');
 
-app.use('/api/protected', authenticateToken);
+app.use('/api/protected', protectedRoutes);
