@@ -1,6 +1,4 @@
 {
     "welcome": "Welcome",
-    "login": "Login",
-    "register": "Register",
-    "logout": "Logout"
+    "goodbye": "Goodbye"
 }
