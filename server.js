@@ -1,3 +1,3 @@
-const cacheMiddleware = require('./middleware/cacheMiddleware');
+const authenticateToken = require('./middleware/authMiddleware');
 
-app.use(cacheMiddleware);
+app.use('/api/protected', authenticateToken);

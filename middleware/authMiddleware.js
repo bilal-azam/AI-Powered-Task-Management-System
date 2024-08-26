@@ -1,17 +1,15 @@
 const jwt = require('jsonwebtoken');
-const User = require('../models/User');
+const secretKey = 'your-secret-key';
 
-const authenticateJWT = (req, res, next) => {
-    const token = req.header('Authorization')?.split(' ')[1];
-    if (token) {
-        jwt.verify(token, process.env.JWT_SECRET, async (err, user) => {
-            if (err) return res.sendStatus(403);
-            req.user = await User.findById(user.id);
-            next();
-        });
-    } else {
-        res.sendStatus(401);
-    }
+const authenticateToken = (req, res, next) => {
+    const token = req.header('Authorization');
+    if (!token) return res.status(401).send('Access denied');
+
+    jwt.verify(token, secretKey, (err, user) => {
+        if (err) return res.status(403).send('Forbidden');
+        req.user = user;
+        next();
+    });
 };
 
-module.exports = { authenticateJWT };
+module.exports = authenticateToken;
