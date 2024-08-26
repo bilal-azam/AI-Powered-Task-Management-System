@@ -9,4 +9,8 @@ const getCache = (key) => {
     return cache.get(key);
 };
 
-module.exports = { setCache, getCache };
+const deleteCache = (key) => {
+    cache.del(key);
+};
+
+module.exports = { setCache, getCache, deleteCache };
