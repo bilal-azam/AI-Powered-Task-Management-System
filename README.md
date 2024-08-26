@@ -1,22 +1,14 @@
-# Project Title
+## New Features
 
-## Features
+- **Password Reset**: Users can now reset their passwords.
+- **Profile Management**: Users can manage their profiles.
+- **External API Integration**: Added support for fetching data from external APIs.
+- **Input Validation**: Forms now include input validation.
+- **Enhanced UX**: Improved user experience on the front end.
+- **Rate Limiting**: Added rate limiting to enhance security.
 
-- **User Roles Management**: Create and manage user roles.
-- **Search Functionality**: Search items with filters.
-- **Automated Tests**: Tests for user registration.
-- **Deployment Pipeline**: Automated deployment with GitHub Actions.
-- **Logging and Monitoring**: Integrated logging with Winston.
-- **Database Indexing**: Improved performance with indexing.
+## Setup
 
-## Endpoints
-
-- **Roles**: `/roles`
-- **Search**: `/search`
-- **Register**: `/users/register`
-
-## Contributing
-Please submit pull requests for any improvements.
-
-## License
-MIT
+1. Install dependencies: `npm install`
+2. Run the server: `npm start`
+3. Visit `http://localhost:3000` to view the application.
