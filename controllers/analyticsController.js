@@ -1,10 +1,10 @@
-const getAnalyticsData = (req, res) => {
-    // Simulated analytics data
-    const analytics = {
-        users: 1234,
-        sales: 5678
+const getAnalyticsData = async (req, res) => {
+    // Sample data
+    const data = {
+        labels: ['January', 'February', 'March'],
+        values: [30, 45, 60]
     };
-    res.json(analytics);
+    res.json(data);
 };
 
 module.exports = { getAnalyticsData };
