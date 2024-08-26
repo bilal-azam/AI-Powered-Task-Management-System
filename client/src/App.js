@@ -1,9 +1,10 @@
-import UserProfilePage from './pages/UserProfilePage';
+import LoginPage from './pages/LoginPage';
 
 const App = () => {
     return (
         <Router>
             <Switch>
+                <Route path="/login" component={LoginPage} />
                 <Route path="/user-profile" component={UserProfilePage} />
                 <Route path="/analytics" component={AnalyticsPage} />
                 <Route path="/feedback" component={FeedbackPage} />
