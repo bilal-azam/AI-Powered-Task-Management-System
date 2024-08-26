@@ -1,16 +1,10 @@
 const jwt = require('jsonwebtoken');
-const User = require('../models/User');
+const secretKey = 'your-secret-key';
 
-const login = async (req, res) => {
-    const { username, password } = req.body;
-    // Placeholder authentication logic
-    const user = await User.findOne({ username });
-    if (user && password === 'password') {
-        const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET);
-        res.json({ token });
-    } else {
-        res.status(401).json({ message: 'Invalid credentials' });
-    }
+const authenticateUser = (req, res) => {
+    // Sample authentication logic
+    const token = jwt.sign({ userId: 1 }, secretKey, { expiresIn: '1h' });
+    res.json({ token });
 };
 
-module.exports = { login };
+module.exports = { authenticateUser };
