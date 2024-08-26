@@ -1,8 +1,8 @@
-const logger = require('../services/newLoggingService');
+const logger = require('../services/loggerService');
 
-const loggerMiddleware = (req, res, next) => {
-    logger.info(req.method + ' ' + req.originalUrl);
+const logRequests = (req, res, next) => {
+    logger.info(`Request: ${req.method} ${req.url}`);
     next();
 };
 
-module.exports = loggerMiddleware;
+module.exports = logRequests;

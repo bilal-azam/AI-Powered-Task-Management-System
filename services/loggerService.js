@@ -1,9 +1,12 @@
-const fs = require('fs');
-const path = require('path');
+const winston = require('winston');
 
-const logAction = (action, details) => {
-    const logEntry = `${new Date().toISOString()} - ${action}: ${JSON.stringify(details)}`;
-    fs.appendFileSync(path.join(__dirname, '../logs/actions.log'), logEntry + '\n');
-};
+const logger = winston.createLogger({
+    level: 'info',
+    format: winston.format.json(),
+    transports: [
+        new winston.transports.Console(),
+        new winston.transports.File({ filename: 'combined.log' })
+    ],
+});
 
-module.exports = { logAction };
+module.exports = logger;
