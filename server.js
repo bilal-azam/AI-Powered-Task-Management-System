@@ -1,11 +1,8 @@
 const express = require('express');
-const i18n = require('./services/i18nService');
+const loggerMiddleware = require('./middlewares/loggerMiddleware');
 
 const app = express();
-app.use(i18n.init);
-app.get('/', (req, res) => {
-    res.send(res.__('welcome'));
-});
+app.use(loggerMiddleware);
 
 app.listen(3000, () => {
     console.log('Server running on port 3000');
