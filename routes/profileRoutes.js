@@ -1,11 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const { upload, uploadProfilePicture, getProfilePicture } = require('../controllers/profileController');
+const { getProfile, updateProfile } = require('../controllers/profileController');
 
-// Upload profile picture
-router.post('/upload', upload.single('profilePicture'), uploadProfilePicture);
-
-// Get profile picture
-router.get('/picture', getProfilePicture);
+router.get('/profile', getProfile);
+router.put('/profile', updateProfile);
 
 module.exports = router;
