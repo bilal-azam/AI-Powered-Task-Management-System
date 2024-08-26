@@ -15,9 +15,9 @@ const FeedbackForm = () => {
             <textarea
                 value={feedback}
                 onChange={(e) => setFeedback(e.target.value)}
+                placeholder="Enter your feedback"
                 rows="4"
                 cols="50"
-                placeholder="Your feedback..."
             />
             <button type="submit">Submit Feedback</button>
         </form>
