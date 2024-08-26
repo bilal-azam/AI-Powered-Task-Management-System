@@ -1,8 +1,8 @@
-const { recommendTasks } = require('../services/recommendationService');
+const { recommend } = require('../services/recommendationService');
 
 const getRecommendations = (req, res) => {
-    const userPreferences = req.body.preferences;
-    const recommendations = recommendTasks(userPreferences);
+    const { userId } = req.params;
+    const recommendations = recommend(userId);
     res.json(recommendations);
 };
 
