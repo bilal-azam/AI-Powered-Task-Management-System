@@ -1,9 +1,10 @@
 const express = require('express');
-const path = require('path');
+const authenticateJWT = require('./middlewares/authMiddleware');
 
 const app = express();
+app.use(express.json());
 
-app.use('/docs', express.static(path.join(__dirname, 'public')));
+app.use('/api', authenticateJWT);
 
 app.listen(3000, () => {
     console.log('Server running on port 3000');
