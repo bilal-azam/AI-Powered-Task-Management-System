@@ -5,13 +5,9 @@ i18n.configure({
     locales: ['en', 'es'],
     directory: path.join(__dirname, '../i18n'),
     defaultLocale: 'en',
-    cookie: 'lang',
-    queryParameter: 'lang'
+    autoReload: true,
+    syncFiles: true,
+    cookie: 'lang'
 });
 
-const i18nMiddleware = (req, res, next) => {
-    i18n.init(req, res);
-    next();
-};
-
-module.exports = i18nMiddleware;
+module.exports = i18n;
