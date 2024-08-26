@@ -1,13 +1,13 @@
-const Task = require('../models/Task');
+const { searchItems } = require('../services/searchService');
 
-const searchTasks = async (req, res) => {
+const search = async (req, res) => {
     const { query } = req.query;
     try {
-        const tasks = await Task.find({ title: { $regex: query, $options: 'i' } });
-        res.json(tasks);
+        const results = await searchItems(query);
+        res.json(results);
     } catch (error) {
-        res.status(400).json({ error: error.message });
+        res.status(500).send('Error performing search');
     }
 };
 
-module.exports = { searchTasks };
+module.exports = { search };
