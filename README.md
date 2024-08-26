@@ -2,30 +2,18 @@
 
 ## Features
 
-- **User Feedback System**: Allows users to submit feedback.
-- **File Upload**: Upload files to the server with validation.
-- **Third-Party API Integration**: Fetch data from external APIs.
-- **Search Functionality**: Search items with optimized queries.
-- **User Activity Logging**: Log user activities.
-- **Error Handling and Logging**: Enhanced error handling and logging.
-- **Multi-Language Support**: Supports English and Spanish.
-- **Rate Limiting**: Limits requests to prevent abuse.
-- **REST API Documentation**: Access API documentation at /docs.
-- **Database Optimization**: Improved query performance.
-- **User Notifications**: Send notifications to users.
-- **Caching**: Cache frequently accessed data.
-- **JWT Authentication**: Secure API endpoints with JWT.
-- **Data Backup**: Daily data backups.
-- **Admin Analytics**: New analytics features for admin panel.
+- **User Roles Management**: Create and manage user roles.
+- **Search Functionality**: Search items with filters.
+- **Automated Tests**: Tests for user registration.
+- **Deployment Pipeline**: Automated deployment with GitHub Actions.
+- **Logging and Monitoring**: Integrated logging with Winston.
+- **Database Indexing**: Improved performance with indexing.
 
 ## Endpoints
 
-- **Feedback**: `/feedback`
-- **Upload**: `/upload`
+- **Roles**: `/roles`
 - **Search**: `/search`
-- **API Data**: `/data/:endpoint`
-- **Analytics**: `/analytics`
-- **Documentation**: `/docs`
+- **Register**: `/users/register`
 
 ## Contributing
 Please submit pull requests for any improvements.
