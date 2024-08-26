@@ -1,17 +1,10 @@
-const User = require('../models/User');
-
 const getProfile = async (req, res) => {
-    const user = await User.findById(req.user._id);
-    res.json(user);
+    // Sample data
+    const profile = {
+        name: 'John Doe',
+        email: 'john.doe@example.com'
+    };
+    res.json(profile);
 };
 
-const updateProfile = async (req, res) => {
-    const { username, email } = req.body;
-    const user = await User.findById(req.user._id);
-    user.username = username;
-    user.email = email;
-    await user.save();
-    res.json(user);
-};
-
-module.exports = { getProfile, updateProfile };
+module.exports = { getProfile };
