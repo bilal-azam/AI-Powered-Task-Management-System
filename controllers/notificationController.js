@@ -1,14 +1,7 @@
-const Notification = require('../models/Notification');
+const { sendEmail } = require('../services/emailService');
 
-const sendNotification = async (req, res) => {
-    try {
-        const { userId, message } = req.body;
-        const notification = new Notification({ userId, message });
-        await notification.save();
-        res.status(201).send('Notification sent');
-    } catch (error) {
-        res.status(500).send('Error sending notification');
-    }
+const notifyAdmin = async () => {
+    await sendEmail('admin@example.com', 'System Event', 'A significant event has occurred in the system.');
 };
 
-module.exports = { sendNotification };
+module.exports = { notifyAdmin };
