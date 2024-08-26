@@ -1,7 +1,7 @@
-const { logActivity } = require('../services/loggingService');
+const logger = require('../services/newLoggingService');
 
 const loggerMiddleware = (req, res, next) => {
-    logActivity(req.method} + ' ' + req.originalUrl);
+    logger.info(req.method + ' ' + req.originalUrl);
     next();
 };
 
