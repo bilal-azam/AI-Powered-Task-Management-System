@@ -1,28 +1,28 @@
-const User = require('../models/User');
 const nodemailer = require('nodemailer');
 
-const sendNotification = async (userId, subject, message) => {
-    try {
-        const user = await User.findById(userId);
-        if (!user) throw new Error('User not found');
-
-        const transporter = nodemailer.createTransport({
-            service: 'Gmail',
-            auth: {
-                user: process.env.EMAIL_USER,
-                pass: process.env.EMAIL_PASS
-            }
-        });
-
-        await transporter.sendMail({
-            from: process.env.EMAIL_USER,
-            to: user.email,
-            subject: subject,
-            text: message
-        });
-    } catch (error) {
-        console.error('Error sending notification:', error.message);
+const transporter = nodemailer.createTransport({
+    service: 'Gmail',
+    auth: {
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS
     }
+});
+
+const sendNotification = (email, subject, text) => {
+    const mailOptions = {
+        from: process.env.EMAIL_USER,
+        to: email,
+        subject: subject,
+        text: text
+    };
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.log('Error sending email:', error);
+        } else {
+            console.log('Email sent:', info.response);
+        }
+    });
 };
 
 module.exports = { sendNotification };
